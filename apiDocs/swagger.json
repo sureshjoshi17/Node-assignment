@@ -1,0 +1,104 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "Node-Assignment",
+    "description": "Node assignment",
+    "version": "1.0.0"
+  },
+  "basePath": "/api",
+  "tags": [
+    {
+      "name": "User Auth",
+      "description": "Operations about user auth",
+      "externalDocs": {
+        "description": "Find out more about our store",
+        "url": ""
+      }
+    }
+  ],
+  "schemes": [
+    "http",
+    "https"
+  ],
+  "consumes": [
+    "application/json",
+    "application/x-www-form-urlencoded",
+    "multipart/form-data"
+  ],
+  "produces": [
+    "application/json"
+  ],
+  "paths": {
+    "/auth/sendOtp": {
+      "post": {
+        "deprecated": false,
+        "tags": [
+          "User Auth"
+        ],
+        "description": "Send Otp",
+        "consumes": [
+          "application/x-www-form-urlencoded"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "email",
+            "in": "formData",
+            "description": "email",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successfully"
+          },
+          "400": {
+            "description": "Failed"
+          }
+        }
+      }
+    },
+    "/auth/login": {
+      "post": {
+        "deprecated": false,
+        "tags": [
+          "User Auth"
+        ],
+        "description": "Login",
+        "consumes": [
+          "application/x-www-form-urlencoded"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "email",
+            "in": "formData",
+            "description": "Email",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "otp",
+            "in": "formData",
+            "description": "OTP",
+            "required": true,
+            "type": "number"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successfully"
+          },
+          "401": {
+            "description": "Failed"
+          }
+        }
+      }
+    }
+  }
+}
