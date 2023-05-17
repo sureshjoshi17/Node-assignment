@@ -29,14 +29,14 @@ exports.sendEmail = async (email, otp) => {
         host: 'smtp.ethereal.email',
         port: 587,
         auth: {
-            user: 'aidan.kunde50@ethereal.email',
-            pass: 'THXxxaPUQtBc7Tw1S9'
+            user: 'alexzander.hamill66@ethereal.email',
+            pass: 'nW5aPnPEvrdbhY8AMd'
         }
     });
 
     // send the OTP to the user's email
     const mailOptions = {
-        from:'aidan.kunde50@ethereal.email',
+        from:'alexzander.hamill66@ethereal.email',
         to: email,
         subject: 'Your OTP for login',
         text: `Your OTP is: ${otp}`

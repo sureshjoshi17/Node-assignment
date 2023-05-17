@@ -2,6 +2,8 @@
 
 This is a Node assignment project. It has two api, for user login. 
 
+In this application I am using nodmailer service for sending verification mails. and I have also used a testing account [Etheral Service] as from account.
+
 ## Features
 
 ## generate OTP
